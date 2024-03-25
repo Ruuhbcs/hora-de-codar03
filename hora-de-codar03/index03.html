@@ -1,0 +1,32 @@
+<!--
+    3 - Escreva um algoritmo para imprimir os números de 1 (inclusive) a 10 (inclusive) em ordem decrescente.
+Exemplo: 10, 9, 8, 7, 6, 5, 4, 3, 2, 1
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora de codar 03</title>
+</head>
+<body>
+    <script>
+        function imprimirNumerosDecrescente() {
+            var numero = 10; 
+            var numerosDecrescente = ''; //vazia
+        
+            while (numero >= 1) { //enquanto
+                numerosDecrescente += numero; 
+                if (numero > 1) {
+                    numerosDecrescente += ', '; // add uma vírgula para cada número, menos para o último 
+                }
+                numero--; 
+            }       
+            alert(numerosDecrescente);
+        }
+
+        imprimirNumerosDecrescente();
+        </script>
+</body>
+</html>

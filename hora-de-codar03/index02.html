@@ -1,0 +1,32 @@
+<!--
+    2 - Crie uma bomba relógio (usando somente código - para deixar claro!) cuja contagem regressiva vá de 30 a 0. Utilize "document.write" para escrever em tela e no final da repetição escreva "EXPLOSÃO".
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora de codar 03</title>
+</head>
+<body>
+    <script>
+        function bombaRelogio() {
+          var segundos = 30; // tempo inicial em segundos      
+          //contagem regressiva
+          var interval = setInterval(function() {
+            document.body.innerHTML = segundos; 
+      
+            segundos--; // Decrementa os segundos
+            if (segundos < 0) {
+              clearInterval(interval);
+              document.body.innerHTML = "EXPLOSÃOOOOOOO!! BOOOOMMM"; 
+              alert("EXPLOSÃOOOO! CABOOOOMMM!!!"); 
+            }
+          }, 1000); 
+        }
+
+        bombaRelogio();
+      </script>
+</body>
+</html>

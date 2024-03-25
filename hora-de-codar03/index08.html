@@ -1,0 +1,34 @@
+<!--
+    8 - Ler um valor N e imprimir todos os valores inteiros entre 1 (inclusive) e N (inclusive). Considere que o N será sempre maior que ZERO. N  é um valor informado pelo usuário
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora de codar 03</title>
+</head>
+<body>
+    <script>
+        function lerValorN() {
+            var n;
+            do {
+                n = parseInt(prompt("Digite um valor inteiro maior que zero: "));
+            } while (isNaN(n) || n <= 0);
+            return n;
+        }
+        function imprimirValoresInteiros(n) {
+            var valores = "";
+            for (var i = 1; i <= n; i++) {
+                valores += i + "\n";
+            }
+            alert("Os valores inteiros entre 1 e " + n + " são: \n" + valores);
+        }
+
+        var valorN = lerValorN();
+        imprimirValoresInteiros(valorN);
+        </script>
+        
+</body>
+</html>

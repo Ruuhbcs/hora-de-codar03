@@ -1,0 +1,31 @@
+<!--
+    9 - Escreva um algoritmo para imprimir os 10 primeiros números inteiros maiores que 100.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora de codar 03</title>
+</head>
+<body>
+    <script>
+        function imprimirNumeros() {
+            var contador = 0;
+            var numero = 101; 
+            var numerosInteiros = "";
+        
+            while (contador < 10) {
+                numerosInteiros += numero + "\n";
+                contador++;
+                numero++;
+            }
+        
+            alert("Os 10 primeiros números inteiros maiores que 100 são:\n\n" + numerosInteiros);
+        }
+
+        imprimirNumeros();
+        </script>
+</body>
+</html>

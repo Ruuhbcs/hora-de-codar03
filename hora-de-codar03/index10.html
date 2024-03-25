@@ -1,0 +1,40 @@
+<!--
+    10 - Escreva um programa para imprimir todas as tabuadas de 1 a N. N será informado pelo usuário.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora de codar 03</title>
+</head>
+<body>
+    <script>
+        function lerValorN() {
+            var n;
+            do {
+                n = parseInt(prompt("Digite um valor inteiro para N:"));
+            } while (isNaN(n) || n <= 0);
+            return n;
+        }
+        function imprimirTabuada(numero) {
+            var tabuada = "";
+            for (var i = 1; i <= 10; i++) {
+                tabuada += numero + " x " + i + " = " + (numero * i) + "\n";
+            }
+            return tabuada;
+        }
+        function imprimirTabuadasAteN() {
+            var n = lerValorN();
+            var tabuadas = "";
+            for (var i = 1; i <= n; i++) {
+                tabuadas += "Tabuada do " + i + ":\n" + imprimirTabuada(i) + "\n";
+            }
+            alert("Tabuadas de 1 a " + n + ":\n\n" + tabuadas);
+        }
+
+        imprimirTabuadasAteN();
+        </script>
+</body>
+</html>

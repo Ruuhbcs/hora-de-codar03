@@ -1,0 +1,52 @@
+<!--
+    05. Faça um algoritmo que calcule e escreva a média aritmética dos dois números inteiros informados pelo usuário e todos os números inteiros entre eles. Considere que o primeiro sempre será menor que o segundo.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora de codar 03</title>
+</head>
+<body>
+    <script>
+        function calcularMediaAritmetica(num1, num2) {
+            let soma = 0;
+            let count = 0;
+        
+            for (let i = num1; i <= num2; i++) {
+                soma += i;
+                count++;
+            }
+        
+            const media = soma / count;
+            alert("A média aritmética é: " + media);
+            alert("Todos os números entre " + num1 + " e " + num2 + " são: " + listarNumeros(num1, num2));
+        }
+        
+        function listarNumeros(num1, num2) {
+            let numeros = "";
+            for (let i = num1; i <= num2; i++) {
+                numeros += i + ", ";
+            }
+            numeros = numeros.slice(0, -2);
+            return numeros;
+        }
+        
+        function main() {
+            const numero1 = parseInt(prompt("Digite o primeiro número inteiro:"));
+            const numero2 = parseInt(prompt("Digite o segundo número inteiro ( deve ser maior que o primeiro):"));
+        
+            if (numero2 <= numero1) {
+                alert("O segundo número deve ser maior que o primeiro. Por favor, recarregue a página e tente novamente.");
+                return; 
+            }
+
+            calcularMediaAritmetica(numero1, numero2);
+        }
+
+        main();
+        </script>
+</body>
+</html>
